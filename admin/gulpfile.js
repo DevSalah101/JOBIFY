@@ -13,7 +13,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css', function() {
-  gulp.src('./assets/dist/css/main.css')
+  gulp.src('./assets/dist/css/all.css')
     .pipe(cleanCSS())
     .pipe(rename({
       extname: '.min.css'
@@ -21,14 +21,6 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./assets/dist/css/'));
 });
 
-gulp.task('serve', function() {
-  gulp.src('.')
-    .pipe(webserver({
-      port: 1234,
-      livereload: true
-    }));
-});
-
 gulp.task('default', ['sass', 'css'], function() {
-  gulp.watch(['./assets/src/styles/**/*.scss', './assets/dist/css/main.css', './*.html'], ['sass', 'css']);
+  gulp.watch(['./assets/src/styles/**/*.scss', './assets/dist/css/all.css'], ['sass', 'css']);
 });
