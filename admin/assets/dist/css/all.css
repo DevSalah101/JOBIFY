@@ -6749,3 +6749,10 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Hi Melody', cursive;
+  font-family: 'Gamja Flower', cursive; }
