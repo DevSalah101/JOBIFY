@@ -11,6 +11,12 @@
                     <i class="fab fa-angular fa-5x"></i>
                 </div>
                 <h3 class="text-center my-4">Sign in to Jobify</h3>
+                <div class="alert alert-danger alert-dismissible fade show rounded-0" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <form class="border bg-white p-4">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Username Or Email address</label>
@@ -25,9 +31,6 @@
                     </div>
                     <button type="submit" class="btn btn-success btn-block  rounded-0 text-uppercase text-center">Sign In</button>
                 </form>
-                <div class="alert alert-light border mt-3 text-center  rounded-0" role="alert">
-                    New to GitHub? <a href="">Create an account.</a>
-                </div>
             </div>
         </div>
     </div>

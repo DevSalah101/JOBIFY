@@ -26,16 +26,13 @@ gulp.task('sass', function() {
 // });
 
 
-// gulp.task('scripts', function() {
-//   return gulp.src('./assets/src/scripts/**/*.js')
-//   .pipe(plumberNotifier())
-//     .pipe(concat('all.js'))
-//     .pipe(rename({
-//       extname: '.min.js'
-//     }))
-//     .pipe(gulp.dest('./assets/dist/js/'));
-// });
+gulp.task('scripts', function() {
+  return gulp.src('./assets/src/scripts/**/*.js')
+  .pipe(plumberNotifier())
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./assets/dist/js/'));
+});
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(['./assets/src/styles/**/*.scss'], ['sass']);
+gulp.task('default', ['sass', 'scripts'], function() {
+  gulp.watch(['./assets/src/styles/**/*.scss', './assets/src/scripts/**/*.js'], ['sass', 'scripts']);
 });
